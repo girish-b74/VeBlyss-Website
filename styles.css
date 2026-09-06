@@ -405,3 +405,82 @@ body{background:#fff;color:var(--v-ink)}
   .home-product-grid .card-img{height:185px}
 }
 
+
+
+/* Phase 4.1 visual correction: the heritage background is soft; real supplied
+   product cut-outs are layered above it. */
+.hero-bg{
+  background:
+    linear-gradient(90deg,rgba(247,241,231,.96) 0%,rgba(247,241,231,.88) 25%,rgba(247,241,231,.30) 55%,rgba(247,241,231,.03) 100%),
+    url('assets/hero-bg-soft.jpg') center/cover no-repeat !important;
+  filter:none !important;
+}
+.hero-products{right:0 !important;width:58% !important;height:440px !important;bottom:0 !important}
+.hero-product{background:transparent !important;mix-blend-mode:normal !important;filter:drop-shadow(0 16px 12px rgba(39,34,22,.16)) !important}
+.hero-product img{object-fit:contain !important;background:transparent !important}
+.hp-ghee{width:205px !important;height:285px !important;left:1% !important;bottom:0 !important}
+.hp-coconut{width:135px !important;height:310px !important;left:25% !important;bottom:3px !important}
+.hp-pooja{width:118px !important;height:335px !important;left:39% !important;bottom:0 !important}
+.hp-black{width:95px !important;height:285px !important;left:49% !important;bottom:0 !important}
+.hp-copper{width:122px !important;height:310px !important;left:59% !important;bottom:0 !important}
+.hp-wallet{width:190px !important;height:155px !important;left:67% !important;bottom:28px !important}
+.hp-mug{width:165px !important;height:190px !important;right:0 !important;bottom:0 !important}
+@media(max-width:800px){
+ .hero-products{width:105% !important;height:320px !important;right:-3% !important}
+}
+@media(max-width:520px){
+ .hero-products{width:118% !important;height:295px !important;right:-12% !important}
+}
+
+
+/* Phase 4.2 — unified header/footer for every page */
+.site-header .brand,
+.footer .footer-brand img{
+  flex:0 0 auto;
+}
+@media (min-width:801px){
+  .site-header .brand{
+    width:205px;
+    height:62px;
+    background:transparent;
+  }
+  .site-header .brand img{
+    width:205px;
+    height:62px;
+    max-height:62px;
+    object-fit:contain;
+    object-position:left center;
+  }
+}
+.page-hero{
+  min-height:255px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.page-title h1{
+  color:#173d3b;
+}
+.footer .footer-brand img{
+  background:transparent;
+}
+@media(max-width:800px){
+  .site-header .brand{
+    width:175px;
+    height:56px;
+  }
+  .site-header .brand img{
+    width:175px;
+    height:56px;
+    max-height:56px;
+    object-fit:contain;
+  }
+}
+@media(max-width:520px){
+  .site-header .brand{
+    width:165px;
+  }
+  .site-header .brand img{
+    width:165px;
+  }
+}

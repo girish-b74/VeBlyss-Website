@@ -1,21 +1,14 @@
-# VeBlyss Website — Phase 4
+# VeBlyss Website — Phase 4.2
 
-This package is the visual refinement of the approved VeBlyss Global homepage.
+This revision fixes the oversized logo and inconsistent navigation on About, Products, Quality, Contact, Product and Cart pages.
 
-## Deploy to GitHub/Vercel
+## What changed
+- All pages now use the same VeBlyss header as the approved homepage.
+- The supplied horizontal logo is constrained to a proper header size.
+- All pages use the same navigation, cart badge, Shop Now button and responsive behavior.
+- Legacy `.nav` / `.topbar` markup was removed from inner pages.
+- Footers are standardized.
+- Homepage functionality remains intact.
 
-1. Extract this folder.
-2. Replace the files in the root of your GitHub repository with these files.
-3. Keep the `assets` folder and all files inside it.
-4. Commit and push to `main`.
-5. Vercel will automatically create a new deployment if the repository is connected.
-
-## Important
-
-The homepage featured products are present directly in `index.html`, so they do not depend on JavaScript to render.
-
-The canonical horizontal logo is:
-`assets/logo-horizontal.jpeg`
-
-The canonical round logo is:
-`assets/logo-round.jpeg`
+## Deploy
+Replace the contents of the GitHub repository with the contents of this folder, commit to `main`, and let Vercel redeploy automatically.
