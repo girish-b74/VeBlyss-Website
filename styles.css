@@ -484,3 +484,137 @@ body{background:#fff;color:var(--v-ink)}
     width:165px;
   }
 }
+
+/* =========================================================
+   Phase 5 — Homepage rebuilt to match the approved draft
+   Keep the supplied product/logo assets; fix section proportions,
+   remove duplicated artwork text, and rebuild the footer.
+   ========================================================= */
+body{overflow-x:hidden}
+
+/* Header: use a transparent derivative of the supplied VeBlyss logo. */
+.homepage-footer + script{}
+.site-header .brand{background:transparent;overflow:visible}
+.site-header .brand img{
+  width:100%;height:auto;max-height:58px;object-fit:contain;object-position:left center;
+}
+
+/* Hero */
+.hero{
+  height:430px !important;
+  min-height:430px;
+  background:#f6efe3;
+}
+.hero-bg{
+  background:
+    linear-gradient(90deg,rgba(247,241,231,.98) 0%,rgba(247,241,231,.90) 25%,rgba(247,241,231,.38) 55%,rgba(247,241,231,.05) 100%),
+    url('assets/hero-bg-soft.jpg') center/cover no-repeat !important;
+}
+.hero-copy{top:49px;left:5.1vw;width:39%;max-width:560px}
+.hero h1{font-size:59px;line-height:.91;margin:12px 0 16px}
+.hero-copy p{font-size:13.5px;line-height:1.48;max-width:500px;margin-bottom:17px}
+.hero-cta{padding:13px 25px}
+.hero-badges{margin-top:25px}
+.hero-products{right:0 !important;bottom:0 !important;width:57% !important;height:395px !important}
+.hero-product{filter:drop-shadow(0 16px 12px rgba(39,34,22,.16)) !important;mix-blend-mode:normal !important}
+.hero-product img{object-fit:contain !important}
+.hp-ghee{width:190px !important;height:270px !important;left:0 !important;bottom:0 !important}
+.hp-coconut{width:125px !important;height:290px !important;left:22% !important;bottom:2px !important}
+.hp-pooja{width:110px !important;height:315px !important;left:34% !important;bottom:0 !important}
+.hp-copper{width:112px !important;height:285px !important;left:47% !important;bottom:0 !important}
+.hp-wallet{width:185px !important;height:155px !important;left:60% !important;bottom:25px !important}
+.hp-mug{width:160px !important;height:180px !important;right:0 !important;bottom:0 !important}
+.hero-script{right:3%;top:38px;font-size:29px}
+
+/* Products */
+.products-section{padding:42px 4.8vw 40px !important}
+.section-head{margin-bottom:22px !important}
+.section-head h2{font-size:40px !important;margin:7px 0 8px !important}
+.home-product-grid{grid-template-columns:repeat(6,minmax(0,1fr)) !important;gap:9px !important;max-width:1360px !important}
+.home-product-grid .card{border:0 !important;border-radius:7px !important;background:#f9f4ea !important;box-shadow:none !important}
+.home-product-grid .card:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(28,50,48,.10) !important}
+.home-product-grid .card-img{height:185px !important;padding:10px !important;background:#f5efe4 !important}
+.home-product-grid .card-img img{mix-blend-mode:normal !important}
+.home-product-grid .card-body{padding:9px 9px 12px !important;min-height:76px}
+.home-product-grid .card h3{font-size:16px !important;line-height:1.04 !important;min-height:34px !important;margin:0 0 9px !important;color:#172f2e}
+.home-product-grid .card .btn{width:auto !important;align-self:center;border:0 !important;background:transparent !important;color:#8a5b12 !important;padding:4px 0 !important;font-size:11px !important}
+
+/* Values */
+.values-section{padding:17px 4.8vw !important;background:#f5eddd !important}
+.values{max-width:1360px !important}
+.value{padding:8px 24px !important}
+.vicon{font-size:31px !important;color:#a56f18 !important}
+.value h3{font-size:18px !important;margin:5px 0 0 !important}
+.value p{font-size:11px !important}
+
+/* Story: the supplied story-bg already contains the right-side headline,
+   so do not add a second text layer on top of it. */
+.story{grid-template-columns:1fr 1.55fr !important;min-height:300px !important;height:300px !important}
+.story-copy{padding:45px 5.2vw !important}
+.story-copy h2{font-size:39px !important;margin:9px 0 14px !important}
+.story-copy p{font-size:12.5px !important;line-height:1.5 !important;max-width:455px !important;margin-bottom:17px !important}
+.story-visual{min-height:300px !important;background:url('assets/story-bg.jpg') center/cover no-repeat !important}
+.story-overlay{display:none !important}
+
+/* Artisan banner: supplied image already contains its copy and CTA. */
+.artisan{height:150px !important;min-height:150px !important;background:url('assets/artisan-bg.jpg') center/cover no-repeat !important}
+.artisan-inner{display:none !important}
+
+/* Draft-style footer: navigation row + contact row + copyright. */
+.homepage-footer{padding:0 4.8vw 9px !important;border-top:1px solid #e4dbca !important;background:#fff !important}
+.homepage-footer .footer-topline{max-width:1360px;margin:0 auto;min-height:76px;display:grid;grid-template-columns:170px 1fr 120px;align-items:center;gap:20px;border-bottom:1px solid #e4dbca}
+.footer-logo-wrap{display:flex;align-items:center}
+.footer-logo-wrap img{width:115px;height:69px;object-fit:cover;object-position:center;background:#3b908b;border-radius:0}
+.footer-nav{display:flex;align-items:center;justify-content:center;gap:11px;font-size:11px;color:#4e5d5b;white-space:nowrap}
+.footer-nav span{color:#b89250}
+.footer-nav a:hover{color:#9b6715}
+.footer-social{display:flex;justify-content:flex-end;gap:8px}
+.footer-social span{width:20px;height:20px;border-radius:4px;background:#1669a8;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.footer-contact-row{max-width:1360px;margin:0 auto;min-height:72px;display:grid;grid-template-columns:1.55fr .85fr 1fr 1fr .9fr;align-items:center;gap:20px;color:#596663;font-size:10px}
+.footer-contact-row>div{display:flex;align-items:center;gap:9px}
+.footer-contact-row b{font-size:20px;color:#a06d1b;font-weight:500}
+.footer-made{justify-content:flex-end;text-align:right;line-height:1.35}
+.footer-made strong{color:#d8483e}
+.homepage-copyright{border-top:1px solid #e4dbca !important;margin-top:0 !important;padding-top:9px !important;font-size:9px !important;text-align:center !important;color:#7b8784 !important}
+
+@media(max-width:1150px){
+  .hero{height:420px !important;min-height:420px}
+  .hero h1{font-size:52px}
+  .hero-products{width:60% !important;height:375px !important}
+  .hp-ghee{width:175px !important}.hp-coconut{width:115px !important}.hp-pooja{width:100px !important}.hp-copper{width:102px !important}.hp-wallet{width:170px !important}.hp-mug{width:145px !important}
+  .home-product-grid{grid-template-columns:repeat(3,1fr) !important}
+  .homepage-footer .footer-topline{grid-template-columns:150px 1fr 100px}
+  .footer-nav{gap:7px;font-size:10px}
+  .footer-contact-row{grid-template-columns:1.4fr .8fr 1fr 1fr .9fr}
+}
+@media(max-width:800px){
+  .site-header .brand{width:175px;height:56px}
+  .site-header .brand img{width:175px;max-height:56px}
+  .hero{height:650px !important;min-height:650px}
+  .hero-copy{top:36px;width:82%;left:7vw}
+  .hero h1{font-size:45px}
+  .hero-products{width:105% !important;height:315px !important;right:-4% !important}
+  .hp-ghee{width:150px !important}.hp-coconut{width:100px !important}.hp-pooja{width:88px !important}.hp-copper{width:90px !important}.hp-wallet{width:145px !important}.hp-mug{width:125px !important}
+  .story{grid-template-columns:1fr !important;height:auto !important;min-height:0 !important}
+  .story-copy{padding:44px 7vw !important}
+  .story-visual{min-height:270px !important}
+  .artisan{height:150px !important;min-height:150px !important}
+  .homepage-footer .footer-topline{grid-template-columns:1fr;justify-items:center;padding:14px 0;gap:10px}
+  .footer-nav{flex-wrap:wrap;white-space:normal}
+  .footer-social{justify-content:center}
+  .footer-contact-row{grid-template-columns:1fr 1fr;padding:15px 0;gap:12px}
+  .footer-made{justify-content:flex-start;text-align:left}
+}
+@media(max-width:520px){
+  .site-header .brand{width:165px}.site-header .brand img{width:165px}
+  .hero{height:620px !important;min-height:620px}
+  .hero h1{font-size:41px}
+  .hero-copy{width:88%}
+  .hero-products{width:122% !important;right:-14% !important;height:285px !important}
+  .home-product-grid{grid-template-columns:1fr 1fr !important}
+  .home-product-grid .card-img{height:180px !important}
+  .values{grid-template-columns:1fr !important}
+  .value{border-right:0 !important;border-bottom:1px solid #d5c9b5}
+  .value:last-child{border-bottom:0}
+  .footer-contact-row{grid-template-columns:1fr}
+}
