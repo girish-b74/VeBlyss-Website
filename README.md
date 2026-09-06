@@ -1,30 +1,21 @@
-# VeBlyss Website — Phase 1
+# VeBlyss Website — Phase 4
 
-Static, responsive website prototype using the supplied VeBlyss logo and product photography.
+This package is the visual refinement of the approved VeBlyss Global homepage.
 
-## Pages
-- Home
-- About Us
-- Our Products / Shop
-- Individual product page
-- Quality & Authenticity
-- Contact
-- Cart
+## Deploy to GitHub/Vercel
 
-## Run locally
-Open `index.html` directly, or run a local server:
+1. Extract this folder.
+2. Replace the files in the root of your GitHub repository with these files.
+3. Keep the `assets` folder and all files inside it.
+4. Commit and push to `main`.
+5. Vercel will automatically create a new deployment if the repository is connected.
 
-```bash
-python -m http.server 8000
-```
+## Important
 
-Then visit `http://localhost:8000`.
+The homepage featured products are present directly in `index.html`, so they do not depend on JavaScript to render.
 
-## Next integration phase
-- Razorpay UPI checkout
-- Customer accounts
-- Orders / order status
-- Admin product and inventory management
-- WhatsApp integration
-- Analytics and SEO
-- Shared backend/API with the Android app
+The canonical horizontal logo is:
+`assets/logo-horizontal.jpeg`
+
+The canonical round logo is:
+`assets/logo-round.jpeg`
