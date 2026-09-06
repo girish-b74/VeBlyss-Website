@@ -1,11 +1,8 @@
-# VeBlyss Global — Fresh Start Phase 1 — Bottom Corrected
+# VeBlyss Global — Fresh Start Phase 1 — Bottom Final
 
-Homepage visual baseline based on the approved second-draft reference.
+Final correction for the approved homepage reference.
 
-This correction specifically fixes:
-- full artisan banner artwork display without vertical cropping
-- transparent footer logo on white background
-- footer alignment, spacing and borders
-- responsive behavior of the bottom sections
-
-No e-commerce functionality has been added yet.
+- Artisan artwork is kept at its natural aspect ratio so its embedded typography and CTA are not horizontally stretched.
+- Footer uses a clean teal transparent VeBlyss wordmark on white.
+- Footer navigation/contact alignment is preserved.
+- No commerce functionality yet.
