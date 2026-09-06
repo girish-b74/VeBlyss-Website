@@ -1,3 +1,3 @@
-# VeBlyss Global — Fresh Start Phase 1
+# VeBlyss Global — Fresh Start Phase 1 Exact Reference
 
-Clean homepage rebuild based on the approved second-draft reference. Visual design only; no cart, login, database, or payment functionality yet.
+Homepage rebuilt from the approved second-draft visual reference. The hero is treated as the approved artwork to avoid duplicated text and blurry compositing.
