@@ -1,3 +1,11 @@
-# VeBlyss Global — Fresh Start Phase 1 — Bottom Visual Fix
+# VeBlyss Global — Fresh Start Phase 1 — Bottom Corrected
 
-The homepage follows the approved second-draft reference. The artisan banner is a single supplied artwork (no duplicate HTML overlay), and the footer uses a dedicated transparent dark VeBlyss logo for correct rendering on white. Visual design only; no cart, login, database, or payment functionality yet.
+Homepage visual baseline based on the approved second-draft reference.
+
+This correction specifically fixes:
+- full artisan banner artwork display without vertical cropping
+- transparent footer logo on white background
+- footer alignment, spacing and borders
+- responsive behavior of the bottom sections
+
+No e-commerce functionality has been added yet.
