@@ -1,10 +1,30 @@
-# VeBlyss Global — Fresh Start Phase 1 — Top Final
+# VeBlyss Website — Phase 1
 
-Final top-half polish for the approved second-draft homepage.
+Static, responsive website prototype using the supplied VeBlyss logo and product photography.
 
-- High-resolution 3072px hero reference artwork, lightly sharpened.
-- Hero is displayed at its native aspect ratio; it is never stretched into a fixed-height box.
-- Navigation spacing, active state, logo sizing, controls and hover states are refined.
-- Product section receives subtle premium hover treatment.
-- The previously approved artisan/footer bottom section is unchanged.
-- No commerce functionality yet.
+## Pages
+- Home
+- About Us
+- Our Products / Shop
+- Individual product page
+- Quality & Authenticity
+- Contact
+- Cart
+
+## Run locally
+Open `index.html` directly, or run a local server:
+
+```bash
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
+
+## Next integration phase
+- Razorpay UPI checkout
+- Customer accounts
+- Orders / order status
+- Admin product and inventory management
+- WhatsApp integration
+- Analytics and SEO
+- Shared backend/API with the Android app
