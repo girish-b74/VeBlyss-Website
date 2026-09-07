@@ -1,8 +1,10 @@
-# VeBlyss Global — Fresh Start Phase 1 — Bottom Final
+# VeBlyss Global — Fresh Start Phase 1 — Top Final
 
-Final correction for the approved homepage reference.
+Final top-half polish for the approved second-draft homepage.
 
-- Artisan artwork is kept at its natural aspect ratio so its embedded typography and CTA are not horizontally stretched.
-- Footer uses a clean teal transparent VeBlyss wordmark on white.
-- Footer navigation/contact alignment is preserved.
+- High-resolution 3072px hero reference artwork, lightly sharpened.
+- Hero is displayed at its native aspect ratio; it is never stretched into a fixed-height box.
+- Navigation spacing, active state, logo sizing, controls and hover states are refined.
+- Product section receives subtle premium hover treatment.
+- The previously approved artisan/footer bottom section is unchanged.
 - No commerce functionality yet.

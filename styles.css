@@ -111,3 +111,119 @@
   .footer-contact{grid-template-columns:1fr}
   .footer-contact>div{border-right:0}
 }
+
+
+/* TOP HALF — final polish */
+body{overflow-x:hidden}
+.header{
+  height:78px;
+  background:#0c7776;
+  position:relative;
+  z-index:5;
+}
+.header:after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:-18px;
+  width:32%;
+  height:30px;
+  background:#fff;
+  clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);
+  z-index:-1;
+}
+.header-inner{
+  max-width:1320px;
+  padding:0 30px;
+  gap:32px;
+}
+.brand{width:245px;height:78px;display:flex;align-items:center}
+.brand img{
+  width:240px;
+  height:68px;
+  max-height:68px;
+  object-fit:contain;
+  object-position:left center;
+}
+.header nav{
+  gap:27px;
+  font-size:13px;
+  font-weight:500;
+}
+.header nav a{
+  height:78px;
+  transition:color .2s ease,opacity .2s ease;
+}
+.header nav a:hover{opacity:.82}
+.header nav a.active{
+  color:#fff;
+  border-color:#e3a82d;
+}
+.actions{gap:18px;margin-left:16px}
+.actions .gold{
+  min-width:112px;
+  padding:10px 23px;
+  border-radius:22px;
+}
+.cart b{background:#dfa12b}
+
+.hero{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  background:#f5f0e7;
+  line-height:0;
+}
+.hero-art{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none;
+  transform:none;
+  filter:none;
+  image-rendering:auto;
+}
+.hero-hotspot{
+  left:4%;
+  top:56%;
+  width:23%;
+  height:14%;
+  border-radius:30px;
+  cursor:pointer;
+}
+.hero-hotspot:focus-visible{
+  outline:3px solid #dfa12b;
+  outline-offset:3px;
+}
+.products{
+  padding-top:20px;
+}
+.head h2{
+  color:#092f35;
+  letter-spacing:-.3px;
+}
+.grid article{
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.grid article:hover{
+  transform:translateY(-2px);
+  box-shadow:0 7px 18px rgba(72,55,25,.09);
+}
+@media(max-width:1100px){
+  .header-inner{padding:0 20px;gap:18px}
+  .brand,.brand img{width:205px}
+  .header nav{gap:17px;font-size:12px}
+  .actions{gap:10px;margin-left:8px}
+}
+@media(max-width:900px){
+  .header{height:72px}
+  .header:after{display:none}
+  .header-inner{padding:0 16px}
+  .brand,.brand img{width:200px;height:64px;max-height:64px}
+  .hero-hotspot{left:5%;top:55%;width:31%;height:13%}
+}
+@media(max-width:560px){
+  .header{height:68px}
+  .brand,.brand img{width:180px;height:60px;max-height:60px}
+  .hero-hotspot{left:5%;top:55%;width:34%;height:12%}
+}
