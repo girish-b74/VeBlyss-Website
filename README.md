@@ -1,30 +1,11 @@
-# VeBlyss Website — Phase 1
+# VeBlyss Website — Phase 1 Visual Correction
 
-Static, responsive website prototype using the supplied VeBlyss logo and product photography.
+This revision keeps the existing Phase 1 pages, product data, cart and checkout flow, while correcting the homepage top-half toward the preferred first-draft visual direction.
 
-## Pages
-- Home
-- About Us
-- Our Products / Shop
-- Individual product page
-- Quality & Authenticity
-- Contact
-- Cart
-
-## Run locally
-Open `index.html` directly, or run a local server:
-
-```bash
-python -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
-
-## Next integration phase
-- Razorpay UPI checkout
-- Customer accounts
-- Orders / order status
-- Admin product and inventory management
-- WhatsApp integration
-- Analytics and SEO
-- Shared backend/API with the Android app
+Changes:
+- Removed the extra top contact bar.
+- Reworked the main navigation to a cleaner first-draft style.
+- Replaced the stretched/low-resolution hero treatment with a proportionally displayed high-resolution hero artwork derived from the approved first-draft composition.
+- Removed homepage product prices and Add to Cart buttons; homepage now uses View Details.
+- Tightened product card proportions and typography.
+- Kept the lower sections and other pages/functionality intact.
