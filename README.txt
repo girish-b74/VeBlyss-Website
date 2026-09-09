@@ -1,0 +1,1 @@
+Corrected VeBlyss Global product-page build. Actual supplied product images are used. Product copy/specifications have been tightened to currently supported VeBlyss information and unsupported claims have been removed.
