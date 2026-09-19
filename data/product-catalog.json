@@ -1,0 +1,128 @@
+{
+  "currency": "INR",
+  "gst_note": "All prices are inclusive of 5% GST.",
+  "retailer_pricing_note": "Retailer discount/pricing is for sales-representative workflows and is not displayed on the public customer website.",
+  "products": [
+    {
+      "product": "VeBlyss Desi Ghee",
+      "variants": [
+        {
+          "variant": "Gold",
+          "pack_size": "1000 ml",
+          "mrp": 720,
+          "retail_discount_pct": 10,
+          "discount_inr": 72,
+          "retailer_price": 648
+        },
+        {
+          "variant": "Gold",
+          "pack_size": "500 ml",
+          "mrp": 390,
+          "retail_discount_pct": 15,
+          "discount_inr": 59,
+          "retailer_price": 332
+        },
+        {
+          "variant": "Gold",
+          "pack_size": "250 ml",
+          "mrp": 200,
+          "retail_discount_pct": 15,
+          "discount_inr": 30,
+          "retailer_price": 170
+        },
+        {
+          "variant": "Gold",
+          "pack_size": "15 L Tin",
+          "mrp": 10800,
+          "retail_discount_pct": 10,
+          "discount_inr": 1080,
+          "retailer_price": 9720
+        },
+        {
+          "variant": "Bilona Heritage",
+          "pack_size": "1000 ml",
+          "mrp": 1085,
+          "retail_discount_pct": 8,
+          "discount_inr": 87,
+          "retailer_price": 998
+        },
+        {
+          "variant": "Bilona Heritage",
+          "pack_size": "500 ml",
+          "mrp": 651,
+          "retail_discount_pct": 18,
+          "discount_inr": 114,
+          "retailer_price": 537
+        },
+        {
+          "variant": "Bilona Heritage",
+          "pack_size": "250 ml",
+          "mrp": 326,
+          "retail_discount_pct": 18,
+          "discount_inr": 57,
+          "retailer_price": 269
+        },
+        {
+          "variant": "Bilona Heritage",
+          "pack_size": "15 L Tin",
+          "mrp": 17903,
+          "retail_discount_pct": 8,
+          "discount_inr": 1432,
+          "retailer_price": 16470
+        }
+      ]
+    },
+    {
+      "product": "VeBlyss Virgin Coconut Oil",
+      "variant_name": "Coco Nara",
+      "variants": [
+        {
+          "variant": "Coco Nara",
+          "pack_size": "1000 ml",
+          "mrp": 550,
+          "retail_discount_pct": 10,
+          "discount_inr": 55,
+          "retailer_price": 495
+        },
+        {
+          "variant": "Coco Nara",
+          "pack_size": "500 ml",
+          "mrp": 330,
+          "retail_discount_pct": 15,
+          "discount_inr": 50,
+          "retailer_price": 281
+        },
+        {
+          "variant": "Coco Nara",
+          "pack_size": "250 ml",
+          "mrp": 303,
+          "retail_discount_pct": 15,
+          "discount_inr": 45,
+          "retailer_price": 257
+        }
+      ]
+    },
+    {
+      "product": "VeBlyss Pooja Oil",
+      "variant_name": "Pancha Jyothi",
+      "variants": [
+        {
+          "variant": "Pancha Jyothi",
+          "pack_size": "1000 ml",
+          "mrp": 285,
+          "retail_discount_pct": 10,
+          "discount_inr": 29,
+          "retailer_price": 257
+        },
+        {
+          "variant": "Pancha Jyothi",
+          "pack_size": "500 ml",
+          "mrp": 171,
+          "retail_discount_pct": 10,
+          "discount_inr": 17,
+          "retailer_price": 154
+        }
+      ]
+    }
+  ]
+}
