@@ -55,7 +55,7 @@ body{font-family:Arial,Helvetica,sans-serif;display:flex;justify-content:center}
      This preserves the exact design rather than reflowing the artwork and
      changing its visual appearance. */
 }
-</style>
+.home-products-dropdown{position:absolute;left:44.3%;top:5.55%;width:17%;min-width:190px;background:#07504e;border:1px solid #dcae55;border-radius:9px;padding:9px;box-shadow:0 16px 35px rgba(0,0,0,.28);z-index:15;display:none;line-height:1.2}.home-products-dropdown a{display:block;padding:10px 13px;border-radius:6px;color:#fff;text-decoration:none;font:14px Arial,Helvetica,sans-serif;white-space:nowrap}.home-products-dropdown a:hover{background:#0b6663;color:#f1d18b}.home-products-dropdown.open{display:block}.home-products-dropdown .buy-products{border-top:1px solid rgba(220,174,85,.55);margin-top:6px;padding-top:11px;color:#f1d18b;font-weight:700}.h-products{z-index:16}</style>
 </head>
 <body>
 <div class="page" id="page">
@@ -64,7 +64,8 @@ body{font-family:Arial,Helvetica,sans-serif;display:flex;justify-content:center}
   <!-- Header -->
   <a class="hotspot h-top-logo" href="index.html" aria-label="VeBlyss Global home"></a>
   <a class="hotspot h-home" href="index.html" aria-label="Home"></a>
-  <a class="hotspot h-products" href="products.html" aria-label="Products"></a>
+  <a class="hotspot h-products" href="products.html" aria-label="Products menu"></a>
+  <div class="home-products-dropdown" id="homeProductsDropdown" aria-label="Products categories"><a href="categories/leather-products.html">Leather Products</a><a href="categories/copper-products.html">Copper Products</a><a href="categories/imitation-jewelry.html">Imitation Jewellery</a><a href="categories/handicrafts.html">Handicrafts</a><a href="categories/sustainable-products.html">Sustainable Products</a><a href="categories/food-products.html">Food Products</a><a class="buy-products" href="products.html">Buy Products →</a></div>
   <a class="hotspot h-about" href="about.html" aria-label="h-about"></a>
   <a class="hotspot h-values" href="values.html" aria-label="h-values"></a>
   <a class="hotspot h-contact" href="contact.html" aria-label="Contact"></a>
@@ -111,6 +112,17 @@ body{font-family:Arial,Helvetica,sans-serif;display:flex;justify-content:center}
 </div>
 
 <script>
+const homeProducts=document.querySelector('.h-products');
+const homeProductsDropdown=document.getElementById('homeProductsDropdown');
+let homeProductsTimer;
+const showHomeProducts=()=>{clearTimeout(homeProductsTimer);homeProductsDropdown.classList.add('open');};
+const hideHomeProducts=()=>{homeProductsTimer=setTimeout(()=>homeProductsDropdown.classList.remove('open'),180);};
+homeProducts.addEventListener('mouseenter',showHomeProducts);
+homeProducts.addEventListener('mouseleave',hideHomeProducts);
+homeProductsDropdown.addEventListener('mouseenter',showHomeProducts);
+homeProductsDropdown.addEventListener('mouseleave',hideHomeProducts);
+homeProducts.addEventListener('click',e=>{if(homeProductsDropdown.classList.contains('open')){e.preventDefault();}});
+
 const modal=document.getElementById('modal');
 const title=document.getElementById('modalTitle');
 const message=document.getElementById('modalMessage');

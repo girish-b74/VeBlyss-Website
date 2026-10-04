@@ -1,1 +1,487 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About Us | VeBlyss Global</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7f2e8;color:#143c3d;font-family:Arial,Helvetica,sans-serif}a{text-decoration:none;color:inherit}.nav{width:min(1180px,92%);margin:auto;min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand img{width:180px;max-width:24vw;display:block}header{background:#07504e;color:#fff;border-bottom:1px solid #dcae55;position:sticky;top:0;z-index:10}nav{display:flex;gap:22px;align-items:center;font-size:14px}nav a:hover{color:#f1d18b}.gold{background:#dcae55;color:#173637;padding:11px 17px;border-radius:8px;font-weight:700}.wrap{width:min(1120px,92%);margin:auto}.hero{background:#0b6663;color:#fff;padding:70px 0}.hero h1{font:52px Georgia,serif;margin:0 0 12px}.hero p{font:italic 22px Georgia,serif;color:#f0d38e;max-width:720px}.section{padding:55px 0}.product-detail{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.product-photo{background:#eee6d6;min-height:500px;display:grid;place-items:center;padding:35px}.product-photo img{max-width:100%;max-height:460px;object-fit:contain}.eyebrow{letter-spacing:3px;font-size:12px;color:#a56d18}.detail h1{font:48px Georgia,serif;margin:8px 0 12px}.detail h2{font:25px Georgia,serif}.detail p{color:#506565;line-height:1.7}.features{padding-left:20px;color:#405858;line-height:2}.btn{display:inline-block;background:#dcae55;color:#173637;padding:13px 22px;border-radius:8px;font-weight:700;margin:8px 8px 8px 0}.secondary{background:#e7decd}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fffdf8;padding:22px;border:1px solid #e0d5c0}.card h3{font:24px Georgia,serif}.card p{color:#536767;line-height:1.6}.card img{height:220px;width:100%;object-fit:contain}.footer{background:#07504e;color:#fff;margin-top:30px;padding:30px 0;text-align:center;font-size:13px}.footer a{color:#f1d18b}.copy{margin-top:14px;color:#d9e2df}.info{background:#eee6d6;padding:35px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.back{display:inline-block;margin-bottom:20px;color:#a56d18;font-weight:700}@media(max-width:800px){nav{display:none}.product-detail,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.detail h1{font-size:38px}.hero h1{font-size:42px}}@media(max-width:520px){.cards{grid-template-columns:1fr}.brand img{width:215px}}</style></head><body><header><div class="nav"><a class="brand" href="index.html"><img src="assets/veblyss-global-main-logo-transparent.png" alt="VeBlyss Global"></a><nav><a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About Us</a><a href="values.html">Our Values</a><a href="commitment.html">Our Commitment</a><a class="gold" href="contact.html">Contact</a></nav></div></header><main><section class="hero"><div class="wrap"><div class="eyebrow">OUR STORY</div><h1>About VeBlyss Global</h1><p>Connecting India’s Artisan Heritage To The World.</p></div></section><section class="section"><div class="wrap"><div class="info"><p>At VeBlyss Global, we bring together the richness of India's traditional wisdom and artisan heritage with contemporary lifestyles. Our products are thoughtfully curated to add value to everyday life — at home, at work and beyond.</p><p>Our focus is on presenting distinctive Indian products with a modern, premium identity for customers in India and global markets.</p></div></div></section></main><footer class="footer"><div class="wrap"><b>VeBlyss Global Pvt Ltd</b><br>Jayanagar 4th 'T' Block, Bengaluru, Karnataka - 560041<br>+91 98448 44225 · <a href="mailto:info@veblyssglobal.com">info@veblyssglobal.com</a> · <a href="https://www.veblyssglobal.com" target="_blank">www.veblyssglobal.com</a><div class="copy">Connecting India's Artisan Heritage To The World.</div></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About Us | VeBlyss Global</title>
+<style>
+:root{--teal:#07504e;--teal2:#0b6663;--cream:#f7f2e8;--paper:#fffdf8;--gold:#dcae55;--ink:#183f40;--muted:#617171;--line:#e2d8c7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{text-decoration:none;color:inherit}
+header{background:var(--teal);color:#fff;border-bottom:1px solid var(--gold);position:sticky;top:0;z-index:50}.nav{width:min(1180px,92%);min-height:84px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand img{width:180px;max-width:25vw;display:block}nav{display:flex;gap:22px;align-items:center;font-size:14px}nav a:hover{color:#f1d18b}.gold{background:var(--gold);color:#173637;padding:11px 17px;border-radius:8px;font-weight:700}
+.wrap{width:min(1120px,92%);margin:auto}.hero{min-height:470px;background:linear-gradient(90deg,rgba(4,42,41,.72),rgba(4,42,41,.18)),url('https://veblyssglobal.com/assets/about/hero.png') center/cover;display:flex;align-items:center;color:#fff}.hero-inner{max-width:760px;padding:72px 0}.eyebrow{letter-spacing:3px;font-size:12px;color:var(--gold);font-weight:700}.hero h1{font:56px Georgia,serif;margin:12px 0 12px}.hero p{font:italic 24px Georgia,serif;color:#f0d38e;margin:0;line-height:1.5}
+.section{padding:74px 0}.section.alt{background:#efe7d7}.section-head{text-align:center;max-width:800px;margin:0 auto 42px}.section-head .eyebrow{margin-bottom:9px}.section-head h2{font:42px Georgia,serif;margin:0 0 14px}.section-head p{color:var(--muted);line-height:1.75}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.photo{background:#e7decd;border-radius:4px;overflow:hidden}.photo img{display:block;width:100%;height:100%;object-fit:cover}.who-photo{min-height:430px}.copy h2{font:40px Georgia,serif;margin:0 0 18px}.copy p{color:#536767;line-height:1.8;margin:0 0 15px}.story{margin-top:28px;border-left:3px solid var(--gold);padding-left:22px}.story strong{font:26px Georgia,serif}
+.vm{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px}.panel{background:var(--paper);border:1px solid var(--line);padding:32px}.panel h3{font:28px Georgia,serif;margin:0 0 12px;color:var(--teal)}.panel p{color:var(--muted);line-height:1.75;margin:0}
+.diff{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.diff-card{background:var(--paper);border:1px solid var(--line);padding:26px;text-align:center;min-height:260px}.diff-card img{height:76px;width:76px;object-fit:contain;margin:0 auto 15px}.diff-card h3{font:23px Georgia,serif;margin:7px 0 10px}.diff-card p{color:var(--muted);line-height:1.65;margin:0;font-size:14px}
+.map{background:#fff;border:1px solid var(--line);padding:10px}.map img{display:block;width:100%;height:auto}.markets-copy{text-align:center;max-width:780px;margin:22px auto 0;color:var(--muted);line-height:1.75}
+.cert-section{background:#fcefe8}.cert-live-head{text-align:center;max-width:980px;margin:0 auto 48px}.cert-live-head h2{font-family:Arial,Helvetica,sans-serif;font-size:52px;line-height:1.08;font-weight:800;color:#8d2f2f;margin:0}.cert-live-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}.cert-live-card{background:#fff;border-radius:12px;min-height:178px;padding:24px 28px 22px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;box-shadow:0 6px 14px rgba(55,38,35,.14)}.cert-live-logos{height:92px;width:100%;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:nowrap}.cert-live-logos img{max-width:112px;max-height:82px;object-fit:contain}.cert-live-card.compact .cert-live-logos{gap:13px}.cert-live-card.compact .cert-live-logos img{max-width:82px;max-height:70px}.cert-live-card h3{font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.15;font-weight:600;color:#27344a;text-align:center;margin:14px 0 0}.cert-live-card.wide-logo .cert-live-logos img{max-width:94px;max-height:72px}.cert-live-card.single .cert-live-logos img{max-width:100px;max-height:78px}.cert-live-note{margin:26px auto 0;max-width:1180px;text-align:center;color:#657070;font-size:13px;line-height:1.6}
+@media(max-width:850px){nav{display:none}.hero{min-height:410px}.hero h1{font-size:44px}.two,.vm{grid-template-columns:1fr}.diff{grid-template-columns:1fr 1fr}.cert-groups{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
+@media(max-width:520px){.brand img{width:210px}.hero h1{font-size:38px}.hero p{font-size:20px}.section{padding:52px 0}.section-head h2,.copy h2{font-size:34px}.diff{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;text-align:left}.footer{padding-top:40px}}.cert-live-head h2{font-size:34px}.cert-live-card{min-height:170px}.cert-live-card h3{font-size:21px}}
+.footer{background:#07504e !important;background-color:#07504e !important;background-image:none !important;color:#ffffff !important;margin-top:0;padding:48px 0 28px;text-align:left;font-size:13px;position:relative;z-index:9999;opacity:1 !important;filter:none !important;mix-blend-mode:normal !important;isolation:isolate}.footer a{color:#f1d18b !important}.footer-grid{width:min(1120px,92%);margin:auto;display:grid;grid-template-columns:1.35fr 1.35fr .9fr;gap:70px;text-align:left;align-items:start}.footer h3{font:22px Georgia,serif;margin:0 0 14px;color:#f1d18b !important}.footer p{line-height:1.75;margin:0;color:#e4eeeb !important}.footer .office-label{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#cbdad6;margin-bottom:8px}.footer .phone{white-space:nowrap}.copy{text-align:center;margin-top:38px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18);color:#d9e2df !important}
+@media(max-width:850px){nav{display:none}.hero{min-height:410px}.hero h1{font-size:44px}.two,.vm{grid-template-columns:1fr}.diff{grid-template-columns:1fr 1fr}.cert-groups{grid-template-columns:1fr}}
+@media(max-width:520px){.brand img{width:210px}.hero h1{font-size:38px}.hero p{font-size:20px}.section{padding:52px 0}.section-head h2,.copy h2{font-size:34px}.diff{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;text-align:center}}
+.nav-products{position:relative;display:flex;align-items:center;height:84px}.nav-products-trigger{display:flex;align-items:center;gap:5px}.nav-caret{font-size:11px;line-height:1;opacity:.9}.nav-dropdown{position:absolute;top:calc(100% - 5px);left:50%;transform:translateX(-50%);min-width:225px;background:#07504e;border:1px solid #dcae55;border-radius:9px;padding:9px;box-shadow:0 16px 35px rgba(0,0,0,.24);display:none;z-index:100}.nav-products:hover .nav-dropdown,.nav-products:focus-within .nav-dropdown{display:grid}.nav-dropdown a{display:block;padding:10px 13px;border-radius:6px;color:#fff;white-space:nowrap}.nav-dropdown a:hover{background:#0b6663;color:#f1d18b}.nav-products-trigger:hover{color:#f1d18b}@media(max-width:800px){.nav-products{height:auto}}</style>
+
+<style id="footer-alignment-fix">
+footer, .site-footer {
+  background:#07504e !important;
+  background-color:#07504e !important;
+  background-image:none !important;
+  opacity:1 !important;
+  filter:none !important;
+  mix-blend-mode:normal !important;
+  position:relative !important;
+  z-index:100 !important;
+}
+footer .footer-inner, footer .footer-grid, footer .wrap,
+.site-footer .footer-inner, .site-footer .footer-grid, .site-footer .wrap {
+  padding-top:32px !important;
+  padding-bottom:34px !important;
+}
+footer .footer-grid, .site-footer .footer-grid {
+  align-items:flex-start !important;
+}
+footer h3, footer h4, .site-footer h3, .site-footer h4 {
+  font-size:18px !important;
+  line-height:1.2 !important;
+  margin-top:0 !important;
+  margin-bottom:10px !important;
+}
+footer p, footer li, footer a, footer .footer-text,
+.site-footer p, .site-footer li, .site-footer a, .site-footer .footer-text {
+  font-size:12px !important;
+  line-height:1.65 !important;
+}
+footer .footer-column, .site-footer .footer-column {
+  padding-top:0 !important;
+}
+footer .footer-bottom, .site-footer .footer-bottom {
+  padding:12px 0 !important;
+  margin-top:4px !important;
+}
+</style>
+
+
+<style id="footer-copyright-final">
+footer .footer-bottom,
+.site-footer .footer-bottom {
+  padding:10px 0 !important;
+}
+footer .footer-bottom,
+footer .footer-bottom *,
+.site-footer .footer-bottom,
+.site-footer .footer-bottom * {
+  font-size:10px !important;
+  line-height:1.4 !important;
+}
+</style>
+
+
+<style id="who-we-are-cleanup">
+.who-we-are-clean{
+  display:grid !important;
+  grid-template-columns:minmax(380px,1fr) minmax(440px,1fr) !important;
+  gap:58px !important;
+  align-items:center !important;
+}
+.who-we-are-clean .eyebrow{
+  font-size:16px !important;
+  letter-spacing:3px !important;
+  font-weight:700 !important;
+  margin-bottom:16px !important;
+  color:#d9a63a !important;
+}
+.who-we-are-clean .who-copy{
+  text-align:left !important;
+  max-width:620px !important;
+}
+.who-we-are-clean .who-copy p{
+  font-size:15px !important;
+  line-height:1.8 !important;
+  margin:0 0 18px !important;
+  color:#31565a !important;
+}
+.who-we-are-clean .who-copy p:last-child{
+  margin-bottom:0 !important;
+}
+.who-we-are-clean img{
+  width:100% !important;
+  height:auto !important;
+  max-height:410px !important;
+  object-fit:cover !important;
+  border-radius:14px !important;
+}
+@media(max-width:850px){
+  .who-we-are-clean{grid-template-columns:1fr !important;gap:28px !important}
+  .who-we-are-clean .who-copy{max-width:none !important}
+}
+</style>
+
+
+<style id="who-we-are-card-style">
+.who-we-are-card-section{
+  background:#f7f3e9 !important;
+}
+.who-we-are-card{
+  background:#fffdf9;
+  border:1px solid #d9cfbd;
+  padding:58px 64px 62px;
+  box-sizing:border-box;
+  max-width:1120px;
+  margin:0 auto;
+}
+.who-we-are-card .eyebrow{
+  font-size:16px !important;
+  letter-spacing:3px !important;
+  font-weight:700 !important;
+  color:#d9a63a !important;
+  margin:0 0 12px !important;
+}
+.who-we-are-card h2{
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-size:52px !important;
+  line-height:1.08 !important;
+  font-weight:500 !important;
+  color:#07504e !important;
+  margin:0 0 26px !important;
+}
+.who-we-are-card p{
+  font-family:Arial,Helvetica,sans-serif !important;
+  font-size:22px !important;
+  line-height:1.75 !important;
+  font-weight:400 !important;
+  color:#617071 !important;
+  max-width:980px;
+  margin:0 0 20px !important;
+}
+.who-we-are-card p:last-child{
+  margin-bottom:0 !important;
+}
+@media(max-width:850px){
+  .who-we-are-card{padding:42px 38px 46px}
+  .who-we-are-card h2{font-size:44px !important}
+  .who-we-are-card p{font-size:19px !important;line-height:1.65 !important}
+}
+@media(max-width:520px){
+  .who-we-are-card{padding:32px 24px 36px}
+  .who-we-are-card h2{font-size:36px !important}
+  .who-we-are-card p{font-size:17px !important}
+}
+</style>
+
+<style id="who-we-are-image-cleanup">
+.who-we-are-image-section{background:#f7f3e9 !important}
+.who-we-are-layout{
+ display:grid !important;
+ grid-template-columns:minmax(380px,1fr) minmax(440px,1fr) !important;
+ gap:58px !important;
+ align-items:center !important;
+ max-width:1120px;
+ margin:0 auto;
+}
+.who-we-are-photo img{
+ display:block !important;
+ width:100% !important;
+ height:410px !important;
+ object-fit:cover !important;
+ border-radius:14px !important;
+}
+.who-we-are-copy{max-width:620px}
+.who-we-are-copy .eyebrow{
+ font-size:16px !important;
+ letter-spacing:3px !important;
+ font-weight:700 !important;
+ color:#d9a63a !important;
+ margin:0 0 18px !important;
+}
+.who-we-are-copy p{
+ font-size:15px !important;
+ line-height:1.8 !important;
+ color:#31565a !important;
+ margin:0 0 20px !important;
+}
+.who-we-are-copy p:last-child{margin-bottom:0 !important}
+@media(max-width:850px){
+ .who-we-are-layout{grid-template-columns:1fr !important;gap:30px !important}
+ .who-we-are-photo img{height:360px !important}
+ .who-we-are-copy{max-width:none}
+}
+@media(max-width:520px){
+ .who-we-are-photo img{height:280px !important}
+ .who-we-are-copy p{font-size:14px !important}
+}
+</style>
+
+
+
+
+
+
+
+<style id="who-story-final-layout">
+.who-we-are-final{
+  background:#f7f2e8!important;
+  padding:70px 0 74px!important;
+}
+.who-we-are-wrap,.our-story-wrap{
+  width:min(1180px,92%);
+  margin:0 auto;
+}
+.who-we-are-grid{
+  display:grid;
+  grid-template-columns:minmax(420px,1fr) minmax(420px,1fr);
+  gap:58px;
+  align-items:center;
+}
+.who-we-are-image img{
+  width:100%;
+  height:470px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  border-radius:0 10px 10px 0;
+}
+.who-we-are-copy{
+  padding:10px 12px;
+}
+.eyebrow{
+  color:#d9a63a!important;
+  font-size:15px!important;
+  font-weight:700!important;
+  letter-spacing:3px!important;
+  margin-bottom:18px!important;
+}
+.who-we-are-copy .who-lead{
+  color:#31565a!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:24px!important;
+  line-height:1.55!important;
+  margin:0 0 22px!important;
+}
+.who-we-are-copy p:not(.who-lead){
+  color:#5e6e6f!important;
+  font-size:16px!important;
+  line-height:1.8!important;
+  margin:0 0 20px!important;
+}
+.our-story-final{
+  background:#eee4d2!important;
+  padding:76px 0 82px!important;
+}
+.our-story-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(400px,.88fr);
+  gap:58px;
+  align-items:center;
+}
+.our-story-copy{
+  padding-left:6px;
+}
+.our-story-copy h1{
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:46px!important;
+  line-height:1.12!important;
+  font-weight:500!important;
+  color:#07504e!important;
+  margin:0 0 18px!important;
+}
+.our-story-copy .story-lead{
+  color:#5e6e6f!important;
+  font-size:17px!important;
+  line-height:1.7!important;
+  margin:0 0 24px!important;
+}
+.our-story-copy h3{
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:24px!important;
+  line-height:1.35!important;
+  font-weight:500!important;
+  color:#07504e!important;
+  border-left:3px solid #d9a63a;
+  padding-left:18px;
+  margin:0 0 20px!important;
+}
+.our-story-copy p:not(.story-lead){
+  color:#173f42!important;
+  font-size:14px!important;
+  line-height:1.7!important;
+  margin:0 0 15px!important;
+}
+.our-story-image img{
+  width:100%;
+  height:510px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  border-radius:0 12px 12px 0;
+}
+@media(max-width:900px){
+  .who-we-are-grid,.our-story-grid{grid-template-columns:1fr;gap:34px}
+  .who-we-are-image img,.our-story-image img{height:auto;max-height:520px}
+  .our-story-image{order:-1}
+}
+@media(max-width:520px){
+  .who-we-are-final,.our-story-final{padding:50px 0!important}
+  .who-we-are-copy .who-lead{font-size:21px!important}
+  .our-story-copy h1{font-size:36px!important}
+}
+</style>
+
+
+<style id="story-image-fit-fix">
+.our-story-image{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+  background:#eee4d2!important;
+  border-radius:12px!important;
+}
+.our-story-image img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:510px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#eee4d2!important;
+}
+</style>
+
+
+<style id="final-story-image-fix">
+.our-story-image{display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#eee4d2!important;}
+.our-story-image img{display:block!important;width:100%!important;height:auto!important;max-height:510px!important;object-fit:contain!important;object-position:center!important;background:#eee4d2!important;}
+</style>
+
+</head>
+<body>
+<header><div class="nav"><a class="brand" href="index.html"><img src="assets/veblyss-global-main-logo-transparent.png" alt="VeBlyss Global"></a><nav><a href="index.html">Home</a><div class="nav-products"><a href="products.html" class="nav-products-trigger" aria-haspopup="true" aria-expanded="false">Products <span class="nav-caret">▾</span></a><div class="nav-dropdown"><a href="categories/leather-products.html">Leather Products</a><a href="categories/copper-products.html">Copper Products</a><a href="categories/imitation-jewelry.html">Imitation Jewellery</a><a href="categories/handicrafts.html">Handicrafts</a><a href="categories/sustainable-products.html">Sustainable Products</a><a href="categories/food-products.html">Food Products</a></div></div><a href="products.html">Buy Products</a><a href="about.html">About Us</a><a href="values.html">Our Values</a><a href="commitment.html">Our Commitment</a><a class="gold" href="contact.html">Contact</a></nav></div></header>
+<section class="hero"><div class="wrap hero-inner"><div class="eyebrow">OUR STORY</div><h1>About VeBlyss Global Pvt Ltd</h1><p>Where Indian Craft Meets Global Standards</p></div></section>
+
+<main>
+
+
+
+
+
+<section class="section who-we-are-final">
+  <div class="who-we-are-wrap">
+    <div class="who-we-are-grid">
+      <div class="who-we-are-image">
+        <img src="assets/who-we-are-weaving.png" alt="Indian artisan weaving">
+      </div>
+      <div class="who-we-are-copy">
+        <div class="eyebrow">WHO WE ARE</div>
+        <p class="who-lead">At VeBlyss Global, we bring together India’s rich tradition, artisan heritage and contemporary lifestyles to deliver handpicked, high-quality products to global markets.</p>
+        <p>From artisan-made leather goods to eco-conscious lifestyle products, we thoughtfully curate products that reflect authenticity, craftsmanship and modern design.</p>
+        <p>Based in Bengaluru, India, we connect trusted artisans and producers with customers and partners worldwide. We specialise in curating, sourcing and exporting distinctive Indian products, with a strong focus on quality, responsible sourcing, reliability and long-term value.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section our-story-final">
+  <div class="our-story-wrap">
+    <div class="our-story-grid">
+      <div class="our-story-copy">
+        <div class="eyebrow">OUR STORY</div>
+        <h1>Built Around Quality, Authenticity &amp; Purpose</h1>
+        <p class="story-lead">VeBlyss was created to bridge the gap between authentic Indian craftsmanship and customers looking for products they can genuinely trust.</p>
+        <h3>A bridge between skilled artisans, trusted producers and discerning customers.</h3>
+        <p>We started VeBlyss after noticing how difficult it had become for consumers and businesses to find products that genuinely combine quality, authenticity, ethical sourcing, and value. Too often, handcrafted goods were overlooked, artisan communities struggled to access global markets, and consumers were left choosing between mass-produced products and products they could truly trust.</p>
+        <p>We wanted to create a brand that connects people with premium handcrafted fashion, lifestyle, and essential products that are responsibly sourced and thoughtfully made. Our goal is to help customers make more conscious purchasing decisions, enjoy healthier lifestyles, and experience products with a genuine story behind them.</p>
+        <p>What makes VeBlyss different is our belief that quality should never come at the expense of ethics. We work to bring together skilled artisans, trusted producers, and discerning customers through craftsmanship, transparency, sustainability, and long-term relationships.</p>
+        <p>At VeBlyss, we believe the best products are not only beautifully made and functional — they also support communities, preserve traditions, and contribute to a healthier and more meaningful way of living.</p>
+      </div>
+      <div class="our-story-image">
+        <img src="assets/veblyss-pooja-oil-story-final.jpg" alt="VeBlyss Pancha Jyothi Pooja Oil at sunset">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section"><div class="wrap"><div class="section-head"><div class="eyebrow">VISION & MISSION</div><h2>What We Stand For</h2></div><div class="vm"><div class="panel"><h3>Our Vision</h3><p>VeBlyss was founded with a simple vision: to bring ethically sourced, premium-quality handcrafted products and essential goods to customers who value authenticity, wellness, and responsible living. By connecting skilled artisans and trusted producers with global markets, we create products that deliver exceptional quality while supporting craftsmanship, sustainability, and healthier lifestyles.</p></div><div class="panel"><h3>Our Mission</h3><p>Our mission is not simply to sell products; it is to share stories, preserve craftsmanship, and create opportunities. Every product we offer is carefully selected for its quality, authenticity, and the positive impact it can have on both the people who make it and the people who use it.</p></div></div></div></section>
+
+<section class="section alt"><div class="wrap"><div class="section-head"><div class="eyebrow">WHY VEBLYSS</div><h2>What Makes Us Different</h2><p>We combine product curation with responsible sourcing, quality assurance and export support.</p></div><div class="diff">
+<div class="diff-card"><img src="https://veblyssglobal.com/assets/home/Sustainable.png" alt="Ethical and sustainable sourcing"><h3>Ethical & Sustainable Sourcing</h3><p>We work with responsible producers and focus on thoughtful sourcing that respects people, materials and traditions.</p></div>
+<div class="diff-card"><img src="https://veblyssglobal.com/assets/home/Certified.png" alt="Certified and compliant"><h3>Certified & Compliant</h3><p>Our export-oriented approach places strong emphasis on documentation, quality standards and applicable compliance requirements.</p></div>
+<div class="diff-card"><img src="https://veblyssglobal.com/assets/home/Custom.png" alt="Custom design and private label"><h3>Custom Design & Private Label</h3><p>We can work with buyers on product selection, customization and private-label opportunities where appropriate.</p></div>
+<div class="diff-card"><img src="https://veblyssglobal.com/assets/home/Eco-Pack.png" alt="Eco-friendly packaging"><h3>Eco-Friendly Packaging</h3><p>We seek practical packaging solutions that protect products while supporting more responsible material choices.</p></div>
+<div class="diff-card"><img src="https://veblyssglobal.com/assets/home/Timely-Del.png" alt="Timely delivery and quality assurance"><h3>Timely Delivery & Quality Assurance</h3><p>Our process is built around dependable execution, product checks and clear coordination from sourcing to dispatch.</p></div>
+<div class="diff-card"><img src="https://veblyssglobal.com/assets/home/EtE-S.png" alt="End-to-end export support"><h3>End-to-End Export Support</h3><p>From sourcing and documentation to shipment coordination, we support buyers through the export journey.</p></div>
+</div></div></section>
+
+<section class="section"><div class="wrap"><div class="section-head"><div class="eyebrow">GLOBAL REACH</div><h2>Markets We Serve</h2></div><div class="map"><img src="https://veblyssglobal.com/assets/about/marketsweserve.jpg" alt="VeBlyss Global international markets"></div><p class="markets-copy">We connect Indian products and artisan heritage with customers and partners across international markets, with an export-focused approach built around quality, compliance and dependable delivery.</p></div></section>
+
+<section class="section cert-section"><div class="wrap">
+<div class="cert-live-head"><h2>Certifications &amp; Legal Compliance</h2></div>
+<div class="cert-live-grid">
+  <div class="cert-live-card">
+    <div class="cert-live-logos">
+      <img src="https://veblyssglobal.com/assets/about/certs/IEC.jpg" alt="Import Export Code (IEC)">
+      <img src="https://veblyssglobal.com/assets/about/certs/FSSAI.jpg" alt="FSSAI">
+    </div>
+    <h3>Import Export Code (IEC) / FSSAI</h3>
+  </div>
+  <div class="cert-live-card compact">
+    <div class="cert-live-logos">
+      <img src="https://veblyssglobal.com/assets/about/certs/APEDA.jpg" alt="APEDA">
+      <img src="https://veblyssglobal.com/assets/about/certs/Spice-Board.jpeg" alt="Spices Board">
+      <img src="https://veblyssglobal.com/assets/about/certs/TeaBoard.jpg" alt="Tea Board">
+      <img src="https://veblyssglobal.com/assets/about/certs/FIEO.jpg" alt="FIEO">
+    </div>
+    <h3>APEDA / Spices Board / Tea Board / FIEO</h3>
+  </div>
+  <div class="cert-live-card compact">
+    <div class="cert-live-logos">
+      <img src="https://veblyssglobal.com/assets/about/certs/GST.jpg" alt="GST">
+      <img src="https://veblyssglobal.com/assets/about/certs/DGFT.jpg" alt="DGFT">
+      <img src="https://veblyssglobal.com/assets/about/certs/MSME.jpg" alt="MSME Udyam">
+    </div>
+    <h3>GST, DGFT, MSME Udyam</h3>
+  </div>
+  <div class="cert-live-card compact">
+    <div class="cert-live-logos">
+      <img src="https://veblyssglobal.com/assets/about/certs/CE.jpg" alt="CE">
+      <img src="https://veblyssglobal.com/assets/about/certs/ROHS.jpg" alt="RoHS">
+      <img src="https://veblyssglobal.com/assets/about/certs/FDA.jpg" alt="FDA">
+      <img src="https://veblyssglobal.com/assets/about/certs/ISO.jpg" alt="ISO">
+      <img src="https://veblyssglobal.com/assets/about/certs/REACH.jpg" alt="REACH">
+    </div>
+    <h3>CE, RoHS, FDA, ISO, REACH</h3>
+  </div>
+  <div class="cert-live-card single">
+    <div class="cert-live-logos">
+      <img src="https://veblyssglobal.com/assets/about/certs/FAO.jpg" alt="PhytoSanitary Certificate">
+    </div>
+    <h3>PhytoSanitary Certificate</h3>
+  </div>
+  <div class="cert-live-card single">
+    <div class="cert-live-logos">
+      <img src="https://veblyssglobal.com/assets/about/certs/COO.jpg" alt="Certificate of Origin (COO)">
+    </div>
+    <h3>Certificate of Origin (COO)</h3>
+  </div>
+</div>
+<p class="cert-live-note">Certification and compliance content is reproduced from the current live VeBlyss Global About page. Individual certificates and applicability may vary by product, shipment and destination.</p>
+</div></section>
+</main>
+<footer class="footer" style="background:#07504e !important;background-color:#07504e !important;background-image:none !important;opacity:1 !important;filter:none !important;"><div class="footer-grid">
+<div>
+  <h3>VeBlyss Global Pvt Ltd</h3>
+  <div class="office-label">India Office</div>
+  <p>2619, 36th A Cross, 26th Main,<br>4th T Block, 9th Block Post,<br>Jayanagar, Bengaluru,<br>Karnataka - 560041</p>
+  <p style="margin-top:10px"><span class="phone">+91 80 2658 2427</span><br><span class="phone">+91 98448 44225<br><a href="mailto:sales@veblyssglobal.com">sales@veblyssglobal.com</a></span></p>
+</div>
+<div>
+  <h3>VeBlyss Limited</h3>
+  <div class="office-label">UK Office</div>
+  <p>71-75 Shelton Street,<br>Covent Garden, London,<br>WC2H 9JQ, United Kingdom</p>
+  <p style="margin-top:10px"><span class="phone">+44 7722 184477</span><br><a href="mailto:info@veblyssglobal.com">info@veblyssglobal.com</a></p>
+</div>
+<div>
+  <h3>Quick Links</h3>
+  <p><a href="index.html">Home</a><br><a href="products.html">Products</a><br><a href="about.html">About Us</a><br><a href="values.html">Our Values</a><br><a href="commitment.html">Our Commitment</a><br><a href="contact.html">Contact</a></p>
+</div>
+</div><div class="copy">© VeBlyss Global Pvt Ltd. All Rights Reserved.</div></footer>
+</body></html>
