@@ -72,6 +72,17 @@ body{font-family:Arial,Helvetica,sans-serif;display:flex;justify-content:center}
 .home-footer-offices{position:absolute;left:60.5%;top:89.05%;width:37%;height:7.65%;background:#fbf9f4;color:#183f40;z-index:14;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(10px,1vw,18px);padding:clamp(8px,.75vw,12px) clamp(8px,.8vw,14px) 0;line-height:1.25;font-family:Arial,Helvetica,sans-serif}
 .home-footer-office{min-width:0;font-size:clamp(7px,.72vw,12px)}.home-footer-office strong{display:block;color:#173f40;font-size:clamp(8px,.82vw,13px);margin-bottom:2px}.home-footer-office .office-label{display:block;color:#617171;font-size:clamp(6.5px,.62vw,10px);letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px}.home-footer-office .address{display:block;margin-bottom:3px}.home-footer-office a{color:#173f40;text-decoration:none;white-space:nowrap}.home-footer-website{position:absolute;left:82.7%;top:95%;width:14%;height:1.5%;z-index:15;color:#173f40;font:clamp(6px,.65vw,10px) Arial,Helvetica,sans-serif;text-align:left;white-space:nowrap}
 @media(max-width:700px){.home-footer-offices{left:59%;width:38.5%;height:8%;padding:5px 6px 0;column-gap:6px}.home-footer-office{font-size:clamp(5.5px,1.25vw,9px)}.home-footer-office strong{font-size:clamp(6px,1.4vw,10px)}.home-footer-office .office-label{font-size:clamp(5px,1vw,8px)}.home-footer-website{left:80.5%;width:17%;font-size:clamp(5px,1vw,8px)}}
+</style><style id="homepage-header-clarity-fix">
+.home-header-clear{position:absolute;left:0;top:0;width:100%;height:13.5%;z-index:25;pointer-events:none}
+.home-header-logo-clear{position:absolute;left:3.2%;top:2.0%;width:22.2%;height:auto;display:block;image-rendering:auto}
+.home-header-nav-clear{position:absolute;left:38.7%;top:2.25%;width:43.5%;height:4.0%;display:flex;align-items:center;gap:clamp(15px,1.35vw,24px);font-family:Arial,Helvetica,sans-serif;font-size:clamp(12px,1.02vw,17px);font-weight:700;color:#123e3e;line-height:1;white-space:nowrap}
+.home-header-nav-clear a{pointer-events:auto;color:#123e3e;text-decoration:none;text-shadow:0 0 1px rgba(18,62,62,.15)}
+.home-header-nav-clear .sep{color:#526463;font-weight:400}
+@media(max-width:700px){
+ .home-header-clear{height:13%}
+ .home-header-logo-clear{left:3.2%;top:2.0%;width:22.2%}
+ .home-header-nav-clear{left:38%;top:2.2%;width:44%;gap:clamp(7px,1.8vw,14px);font-size:clamp(7px,1.9vw,11px)}
+}
 </style></head>
 <body>
 <div class="page" id="page">
@@ -83,6 +94,16 @@ body{font-family:Arial,Helvetica,sans-serif;display:flex;justify-content:center}
   <div class="home-footer-website">www.veblyssglobal.com</div>
 
   <!-- Header -->
+  <div class="home-header-clear" aria-label="Homepage header">
+    <a class="home-header-logo-clear" href="index.html" aria-label="VeBlyss Global home"><img src="assets/veblyss-global-main-logo-transparent.png" alt="VeBlyss Global" style="display:block;width:100%;height:auto"></a>
+    <nav class="home-header-nav-clear" aria-label="Main navigation">
+      <a href="index.html">Home</a><span class="sep">|</span>
+      <a href="products.html">Buy Products</a><span class="sep">|</span>
+      <a href="about.html">About Us</a><span class="sep">|</span>
+      <a href="values.html">Our Values</a><span class="sep">|</span>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
   <a class="hotspot h-top-logo" href="index.html" aria-label="VeBlyss Global home"></a>
   <a class="hotspot h-social-fb" href="https://www.facebook.com/p/VeBlyss-Global-61582672670887/" target="_blank" rel="noopener noreferrer" aria-label="VeBlyss Global on Facebook"></a>
   <a class="hotspot h-social-ig" href="https://www.instagram.com/veblyssglobal.pvt.ltd/" target="_blank" rel="noopener noreferrer" aria-label="VeBlyss Global on Instagram"></a>
