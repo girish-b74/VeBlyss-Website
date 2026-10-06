@@ -1,6 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkout | VeBlyss Global</title><style>*{box-sizing:border-box}body{margin:0;background:#f7f2e8;color:#173f40;font-family:Arial,Helvetica,sans-serif}a{text-decoration:none;color:inherit}header{background:#07504e;color:#fff;border-bottom:1px solid #dcae55;position:sticky;top:0;z-index:20}.nav{width:min(1180px,92%);margin:auto;min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand img{width:180px;max-width:24vw;display:block}nav{display:flex;gap:22px;align-items:center;font-size:14px}nav a:hover{color:#f1d18b}.gold,.cart-link{background:#dcae55;color:#173637;padding:11px 17px;border-radius:8px;font-weight:700}.wrap{width:min(1080px,92%);margin:auto}.hero{background:#0b6663;color:#fff;padding:52px 0;border-bottom:1px solid #dcae55}.hero h1{font:48px Georgia,serif;margin:10px 0}.hero p{font:italic 19px Georgia,serif;color:#f0d38e}.section{padding:48px 0}.grid{display:grid;grid-template-columns:1.1fr .8fr 1fr;gap:28px;align-items:start}
 .map-card{grid-column:auto}
-.map-search{width:100%;padding:12px;border:1px solid #cfc3ae;border-radius:6px;background:#fff;font:15px Arial;margin-bottom:12px}
+.map-search-wrap{position:relative;margin-bottom:12px}
+.map-search{width:100%;padding:12px;border:1px solid #cfc3ae;border-radius:6px;background:#fff;font:15px Arial}
+.map-results{position:absolute;left:0;right:0;top:calc(100% + 2px);background:#fff;border:1px solid #d6cab6;border-radius:6px;box-shadow:0 10px 25px rgba(0,0,0,.15);z-index:30;display:none;overflow:hidden}
+.map-result{padding:11px 12px;border-bottom:1px solid #eee3d3;cursor:pointer;font-size:13px;line-height:1.35}
+.map-result:last-child{border-bottom:0}
+.map-result:hover{background:#f5eee2}
+.map-result-title{font-weight:700;color:#173f40}
+.map-result-address{color:#647474;margin-top:3px}
+
 #map{width:100%;height:360px;border-radius:7px;border:1px solid #d8ccb8;overflow:hidden;background:#e9e4da}
 .selected-location{margin-top:12px;padding:12px 14px;border-radius:6px;background:#f5eee2;border:1px solid #dfd2bc;font-size:13px;line-height:1.5}
 .map-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
@@ -9,7 +17,7 @@
 <div class="card map-card">
 <h2>Delivery Location</h2>
 <div class="muted" style="margin:-8px 0 12px">Select your exact Bangalore delivery location on Google Maps.</div>
-<input id="mapSearch" class="map-search" type="text" placeholder="Search for your address or landmark">
+<div class="map-search-wrap"><input id="mapSearch" class="map-search" type="text" autocomplete="off" placeholder="Search for your address or landmark"><div id="mapResults" class="map-results"></div></div>
 <div id="map"></div>
 <div class="map-actions"><button type="button" class="btn secondary" id="locateMe">Use My Current Location</button></div>
 <div id="selectedLocation" class="selected-location">No location selected yet.</div>
@@ -21,7 +29,7 @@ function renderSummary(){const c=getOrder();if(!c.length){document.getElementByI
 function updatePayment(){const type=document.querySelector('input[name=payment]:checked').value,total=VeBlyssCart.total(),n=document.getElementById('paymentNotice'),cn=document.getElementById('codNotice');if(type==='cod'){n.style.display='none';cn.style.display='block';if(total<COD_MIN){cn.className='notice error';cn.textContent='COD is available only for Bangalore orders of ₹5,000 or more. Your current cart total is '+money(total)+'. Please add more products to continue.'}else{cn.className='notice success';cn.textContent='COD is available for this order. Minimum order value of ₹5,000 is met.'}}else{n.style.display='block';cn.style.display='none'}}
 document.querySelectorAll('input[name=payment]').forEach(r=>r.addEventListener('change',updatePayment));
 document.getElementById('orderForm').addEventListener('submit',async function(e){e.preventDefault();const c=getOrder(),total=VeBlyssCart.total(),fd=new FormData(this),payment=fd.get('payment');if(!c.length)return;if(payment==='cod'&&total<COD_MIN){alert('COD requires a minimum order value of ₹5,000.');return}if(payment==='cod'&&!String(fd.get('city')).toLowerCase().includes('bengal')){alert('Cash on Delivery is currently available only within Bangalore.');return}const orderId='VB-'+Date.now().toString().slice(-8);const lines=c.map(i=>i.name+' | Qty: '+i.qty+' | MRP: '+money(i.price)+' | Amount: '+money(i.price*i.qty)).join('\n');const body='New VeBlyss Global COD Order\n\nOrder ID: '+orderId+'\n\nCustomer: '+fd.get('name')+'\nMobile: '+fd.get('mobile')+'\nEmail: '+fd.get('email')+'\nAddress: '+fd.get('address')+'\nArea: '+fd.get('area')+'\nCity: '+fd.get('city')+'\nPincode: '+fd.get('pincode')+'\n\nProducts:\n'+lines+'\n\nTotal MRP: '+money(total)+' (incl. GST)\nPayment: '+payment.toUpperCase()+'\n\nPlease confirm availability and dispatch.';if(payment==='upi'){alert('UPI/Razorpay is prepared for integration but is not activated yet. Your order has not been charged.');return}const mailto='mailto:girish@veblyssglobal.com?subject='+encodeURIComponent('VeBlyss COD Order '+orderId)+'&body='+encodeURIComponent(body);window.location.href=mailto;setTimeout(()=>{alert('Your COD order details are ready to email. Please press Send in your email app to complete the notification.');},300);});
-let deliveryMap=null,deliveryMarker=null,deliveryGeocoder=null,deliveryAutocomplete=null,selectedMapLocation=null;
+let deliveryMap=null,deliveryMarker=null,deliveryGeocoder=null,selectedMapLocation=null,autocompleteSessionToken=null,autocompleteLib=null;
 function setSelectedLocation(latLng,address){
   selectedMapLocation={lat:latLng.lat(),lng:latLng.lng(),address:address||('Lat '+latLng.lat().toFixed(6)+', Lng '+latLng.lng().toFixed(6))};
   document.getElementById('selectedLocation').innerHTML='<b>Selected delivery location</b><br>'+selectedMapLocation.address+'<br><span class="muted">Latitude: '+selectedMapLocation.lat.toFixed(6)+' · Longitude: '+selectedMapLocation.lng.toFixed(6)+'</span>';
@@ -39,15 +47,79 @@ function initDeliveryMap(){
   deliveryGeocoder=new google.maps.Geocoder();
   deliveryMap.addListener('click',e=>{deliveryMarker.setPosition(e.latLng);reverseGeocode(e.latLng);});
   deliveryMarker.addListener('dragend',e=>reverseGeocode(e.latLng));
-  const input=document.getElementById('mapSearch');
-  deliveryAutocomplete=new google.maps.places.Autocomplete(input,{componentRestrictions:{country:'in'},fields:['geometry','formatted_address']});
-  deliveryAutocomplete.addListener('place_changed',()=>{
-    const place=deliveryAutocomplete.getPlace();
-    if(!place.geometry||!place.geometry.location){alert('Please choose an address from the search suggestions.');return;}
-    deliveryMap.setCenter(place.geometry.location);deliveryMap.setZoom(16);deliveryMarker.setPosition(place.geometry.location);
-    setSelectedLocation(place.geometry.location,place.formatted_address||input.value);
-  });
   reverseGeocode(deliveryMarker.getPosition());
+  setupPlaceSearch();
+}
+async function setupPlaceSearch(){
+  try{
+    const lib=await google.maps.importLibrary('places');
+    autocompleteLib=lib;
+    autocompleteSessionToken=new lib.AutocompleteSessionToken();
+    const input=document.getElementById('mapSearch');
+    const resultsBox=document.getElementById('mapResults');
+    let timer=null,requestId=0;
+    input.addEventListener('input',()=>{
+      clearTimeout(timer);
+      const value=input.value.trim();
+      if(!value){resultsBox.innerHTML='';resultsBox.style.display='none';return;}
+      timer=setTimeout(()=>searchPlaces(value),250);
+    });
+    async function searchPlaces(value){
+      const thisRequest=++requestId;
+      try{
+        const request={
+          input:value,
+          includedRegionCodes:['in'],
+          language:'en',
+          region:'in',
+          locationBias:{center:{lat:12.9716,lng:77.5946},radius:50000},
+          sessionToken:autocompleteSessionToken
+        };
+        const {suggestions}=await lib.AutocompleteSuggestion.fetchAutocompleteSuggestions(request);
+        if(thisRequest!==requestId)return;
+        resultsBox.innerHTML='';
+        const usable=(suggestions||[]).filter(x=>x.placePrediction);
+        usable.slice(0,6).forEach(suggestion=>{
+          const p=suggestion.placePrediction;
+          const item=document.createElement('div');
+          item.className='map-result';
+          item.innerHTML='<div class="map-result-title"></div><div class="map-result-address"></div>';
+          item.querySelector('.map-result-title').textContent=p.mainText?.toString()||p.text?.toString()||'Place';
+          item.querySelector('.map-result-address').textContent=p.secondaryText?.toString()||'';
+          item.addEventListener('mousedown',async ev=>{
+            ev.preventDefault();
+            try{
+              const place=p.toPlace();
+              await place.fetchFields({fields:['displayName','formattedAddress','location']});
+              if(!place.location)throw new Error('Selected place has no location');
+              deliveryMap.setCenter(place.location);
+              deliveryMap.setZoom(16);
+              deliveryMarker.setPosition(place.location);
+              setSelectedLocation(place.location,place.formattedAddress||place.displayName||input.value);
+              input.value=place.formattedAddress||place.displayName||input.value;
+              resultsBox.innerHTML='';resultsBox.style.display='none';
+              autocompleteSessionToken=new lib.AutocompleteSessionToken();
+            }catch(err){
+              console.error(err);
+              alert('The selected place could not be loaded. Please try another result or select the location directly on the map.');
+            }
+          });
+          resultsBox.appendChild(item);
+        });
+        resultsBox.style.display=usable.length?'block':'none';
+      }catch(err){
+        console.error(err);
+        resultsBox.innerHTML='<div class="map-result"><div class="map-result-address">Search is temporarily unavailable. You can select the location directly on the map.</div></div>';
+        resultsBox.style.display='block';
+      }
+    }
+    document.addEventListener('click',e=>{
+      if(!e.target.closest('.map-search-wrap'))resultsBox.style.display='none';
+    });
+  }catch(err){
+    console.error(err);
+    document.getElementById('mapSearch').placeholder='Search unavailable — select on map';
+  }
 }
 async function loadDeliveryMap(){
   try{
@@ -57,8 +129,9 @@ async function loadDeliveryMap(){
     if(window.google&&window.google.maps){initDeliveryMap();return;}
     window.initDeliveryMap=initDeliveryMap;
     const script=document.createElement('script');
-    script.src='https://maps.googleapis.com/maps/api/js?key='+encodeURIComponent(config.key)+'&libraries=places&callback=initDeliveryMap';
-    script.async=true;script.defer=true;script.onerror=()=>{document.getElementById('map').innerHTML='<div style="padding:20px">Google Maps could not be loaded. Please check the API key and enabled APIs.</div>';};
+    script.src='https://maps.googleapis.com/maps/api/js?key='+encodeURIComponent(config.key)+'&loading=async&callback=initDeliveryMap';
+    script.async=true;script.defer=true;
+    script.onerror=()=>{document.getElementById('map').innerHTML='<div style="padding:20px">Google Maps could not be loaded. Please check the API key and enabled APIs.</div>';};
     document.head.appendChild(script);
   }catch(err){
     console.error(err);
