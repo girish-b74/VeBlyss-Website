@@ -27,16 +27,16 @@ body{font-family:Arial,Helvetica,sans-serif;display:flex;justify-content:center}
 .h-wallet{left:45.0%;top:41.0%;width:14.0%;height:20.0%}
 .h-copper{left:59.5%;top:41.0%;width:14.0%;height:20.0%}
 .h-mug{left:74.2%;top:41.0%;width:14.0%;height:20.0%}
-.h-story{left:38.7%;top:69.7%;width:8.0%;height:3.8%}
-.h-journey{left:58.0%;top:84.25%;width:11.5%;height:3.0%}
-.h-footer-home{left:27.0%;top:90.2%;width:3.0%;height:2.2%}
-.h-footer-products{left:31.0%;top:90.2%;width:4.3%;height:2.2%}
-.h-footer-about{left:36.0%;top:90.2%;width:4.5%;height:2.2%}
-.h-footer-values{left:44.0%;top:90.2%;width:5.5%;height:2.8%}
-.h-footer-contact{left:51.8%;top:90.2%;width:7.0%;height:2.8%}
-.h-footer-phone{left:73.2%;top:90.0%;width:10%;height:2.5%}
-.h-footer-email{left:73.0%;top:92.3%;width:12%;height:2.2%}
-.h-footer-web{left:73.0%;top:94.4%;width:12%;height:2.2%}
+.h-story{left:38.7%;top:69.9306%;width:8.0%;height:3.8%}
+.h-journey{left:58.0%;top:84.1312%;width:11.5%;height:3.0%}
+.h-footer-home{left:27.0%;top:90.1261%;width:3.0%;height:2.2%}
+.h-footer-products{left:31.0%;top:90.1261%;width:4.3%;height:2.2%}
+.h-footer-about{left:36.0%;top:90.1261%;width:4.5%;height:2.2%}
+.h-footer-values{left:44.0%;top:90.1261%;width:5.5%;height:2.8%}
+.h-footer-contact{left:51.8%;top:90.1261%;width:7.0%;height:2.8%}
+.h-footer-phone{left:61.0%;top:92.7961%;width:10%;height:1.5%;z-index:16}
+.h-footer-email{left:61.0%;top:93.5013%;width:11%;height:1.5%;z-index:16}
+.h-footer-web{left:70%;top:95.0127%;width:16%;height:1.8%;z-index:16}
 .h-top-logo{left:4%;top:0.9%;width:21%;height:6.5%}
 
 .modal{position:fixed;inset:0;background:rgba(4,35,34,.72);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}
@@ -56,6 +56,13 @@ body{font-family:Arial,Helvetica,sans-serif;display:flex;justify-content:center}
      changing its visual appearance. */
 }
 .home-products-dropdown{position:absolute;left:44.3%;top:5.55%;width:17%;min-width:190px;background:#07504e;border:1px solid #dcae55;border-radius:9px;padding:9px;box-shadow:0 16px 35px rgba(0,0,0,.28);z-index:15;display:none;line-height:1.2}.home-products-dropdown a{display:block;padding:10px 13px;border-radius:6px;color:#fff;text-decoration:none;font:14px Arial,Helvetica,sans-serif;white-space:nowrap}.home-products-dropdown a:hover{background:#0b6663;color:#f1d18b}.home-products-dropdown.open{display:block}.home-products-dropdown .buy-products{border-top:1px solid rgba(220,174,85,.55);margin-top:6px;padding-top:11px;color:#f1d18b;font-weight:700}.h-products{z-index:16}</style>
+
+<style id="clean-footer-hotspots">
+.h-social-fb{left:26.1%;top:92.25%;width:2.6%;height:3.0%;z-index:16}.h-social-ig{left:29.0%;top:92.25%;width:2.6%;height:3.0%;z-index:16}.h-social-li{left:32.0%;top:92.25%;width:2.6%;height:3.0%;z-index:16}.h-social-yt{left:35.0%;top:92.25%;width:2.6%;height:3.0%;z-index:16}
+.h-india-phone{left:61.0%;top:92.85%;width:10%;height:1.5%;z-index:16}.h-india-email{left:61.0%;top:93.55%;width:11%;height:1.5%;z-index:16}
+.h-uk-phone{left:81.0%;top:92.85%;width:8%;height:1.5%;z-index:16}.h-uk-email{left:81.0%;top:93.55%;width:11%;height:1.5%;z-index:16}
+.h-footer-web{left:70%;top:95.0127%;width:16%;height:1.8%;z-index:16}
+</style>
 </head>
 <body>
 <div class="page" id="page">
@@ -63,9 +70,13 @@ body{font-family:Arial,Helvetica,sans-serif;display:flex;justify-content:center}
 
   <!-- Header -->
   <a class="hotspot h-top-logo" href="index.html" aria-label="VeBlyss Global home"></a>
+  <a class="hotspot h-social-fb" href="https://www.facebook.com/p/VeBlyss-Global-61582672670887/" target="_blank" rel="noopener noreferrer" aria-label="VeBlyss Global on Facebook"></a>
+  <a class="hotspot h-social-ig" href="https://www.instagram.com/veblyssglobal.pvt.ltd/" target="_blank" rel="noopener noreferrer" aria-label="VeBlyss Global on Instagram"></a>
+  <a class="hotspot h-social-li" href="https://in.linkedin.com/company/veblyss-global-pvt-ltd" target="_blank" rel="noopener noreferrer" aria-label="VeBlyss Global on LinkedIn"></a>
+  <a class="hotspot h-social-yt" href="https://www.youtube.com/@VeBlyssGlobal/shorts" target="_blank" rel="noopener noreferrer" aria-label="VeBlyss Global on YouTube"></a>
   <a class="hotspot h-home" href="index.html" aria-label="Home"></a>
   <a class="hotspot h-products" href="products.html" aria-label="Products menu"></a>
-  <div class="home-products-dropdown" id="homeProductsDropdown" aria-label="Products categories"><a href="categories/leather-products.html">Leather Products</a><a href="categories/copper-products.html">Copper Products</a><a href="categories/imitation-jewelry.html">Imitation Jewellery</a><a href="categories/handicrafts.html">Handicrafts</a><a href="categories/sustainable-products.html">Sustainable Products</a><a href="categories/food-products.html">Food Products</a><a class="buy-products" href="products.html">Buy Products →</a></div>
+  <div class="home-products-dropdown" id="homeProductsDropdown" aria-label="Products categories"><a href="categories/leather-products.html">Leather Products</a><a href="categories/copper-products.html">Copper Products</a><a href="categories/imitation-jewelry.html">Imitation Jewellery</a><a href="categories/handicrafts.html">Handicrafts</a><a href="categories/sustainable-products.html">Sustainable Products</a><a href="categories/food-products.html">Food Products</a></div>
   <a class="hotspot h-about" href="about.html" aria-label="h-about"></a>
   <a class="hotspot h-values" href="values.html" aria-label="h-values"></a>
   <a class="hotspot h-contact" href="contact.html" aria-label="Contact"></a>
@@ -94,7 +105,9 @@ body{font-family:Arial,Helvetica,sans-serif;display:flex;justify-content:center}
   <a class="hotspot h-footer-values" href="values.html" aria-label="Values"></a>
   <a class="hotspot h-footer-contact" href="contact.html" aria-label="Footer Contact"></a>
   <a class="hotspot h-footer-phone" href="tel:+919844844225" aria-label="Call VeBlyss Global"></a>
-  <a class="hotspot h-footer-email" href="mailto:info@veblyssglobal.com" aria-label="Email VeBlyss Global"></a>
+  <a class="hotspot h-footer-email" href="mailto:sales@veblyssglobal.com" aria-label="Email India Office"></a>
+  <a class="hotspot h-uk-phone" href="tel:+447722184477" aria-label="Call UK Office"></a>
+  <a class="hotspot h-uk-email" href="mailto:info@veblyssglobal.com" aria-label="Email UK Office"></a>
   <a class="hotspot h-footer-web" href="https://www.veblyssglobal.com" target="_blank" rel="noopener" aria-label="VeBlyss Global website"></a>
 </div>
 
