@@ -28,7 +28,26 @@ function getOrder(){return VeBlyssCart.load()}
 function renderSummary(){const c=getOrder();if(!c.length){document.getElementById('empty').style.display='block';document.getElementById('checkout').style.display='none';return}let total=c.reduce((s,i)=>s+i.price*i.qty,0);document.getElementById('summary').innerHTML=c.map(i=>'<div class="line"><span>'+i.name+' × '+i.qty+'</span><b>'+money(i.price*i.qty)+'</b></div>').join('')+'<div class="total"><b>Total MRP: '+money(total)+'</b></div><div class="muted">All prices are inclusive of GST.</div>'}
 function updatePayment(){const type=document.querySelector('input[name=payment]:checked').value,total=VeBlyssCart.total(),n=document.getElementById('paymentNotice'),cn=document.getElementById('codNotice');if(type==='cod'){n.style.display='none';cn.style.display='block';if(total<COD_MIN){cn.className='notice error';cn.textContent='COD is available only for Bangalore orders of ₹5,000 or more. Your current cart total is '+money(total)+'. Please add more products to continue.'}else{cn.className='notice success';cn.textContent='COD is available for this order. Minimum order value of ₹5,000 is met.'}}else{n.style.display='block';cn.style.display='none'}}
 document.querySelectorAll('input[name=payment]').forEach(r=>r.addEventListener('change',updatePayment));
-document.getElementById('orderForm').addEventListener('submit',async function(e){e.preventDefault();const c=getOrder(),total=VeBlyssCart.total(),fd=new FormData(this),payment=fd.get('payment');if(!c.length)return;if(payment==='cod'&&total<COD_MIN){alert('COD requires a minimum order value of ₹5,000.');return}if(payment==='cod'&&!String(fd.get('city')).toLowerCase().includes('bengal')){alert('Cash on Delivery is currently available only within Bangalore.');return}const orderId='VB-'+Date.now().toString().slice(-8);const lines=c.map(i=>i.name+' | Qty: '+i.qty+' | MRP: '+money(i.price)+' | Amount: '+money(i.price*i.qty)).join('\n');const body='New VeBlyss Global COD Order\n\nOrder ID: '+orderId+'\n\nCustomer: '+fd.get('name')+'\nMobile: '+fd.get('mobile')+'\nEmail: '+fd.get('email')+'\nAddress: '+fd.get('address')+'\nArea: '+fd.get('area')+'\nCity: '+fd.get('city')+'\nPincode: '+fd.get('pincode')+'\n\nProducts:\n'+lines+'\n\nTotal MRP: '+money(total)+' (incl. GST)\nPayment: '+payment.toUpperCase()+'\n\nPlease confirm availability and dispatch.';if(payment==='upi'){alert('UPI/Razorpay is prepared for integration but is not activated yet. Your order has not been charged.');return}const mailto='mailto:girish@veblyssglobal.com?subject='+encodeURIComponent('VeBlyss COD Order '+orderId)+'&body='+encodeURIComponent(body);window.location.href=mailto;setTimeout(()=>{alert('Your COD order details are ready to email. Please press Send in your email app to complete the notification.');},300);});
+document.getElementById('orderForm').addEventListener('submit',async function(e){
+e.preventDefault();
+const c=getOrder(),total=VeBlyssCart.total(),fd=new FormData(this),payment=fd.get('payment');
+if(!c.length)return;
+if(payment==='cod'&&total<COD_MIN){alert('COD requires a minimum order value of ₹5,000.');return}
+if(payment==='cod'&&!String(fd.get('city')).toLowerCase().includes('bengal')){alert('Cash on Delivery is currently available only within Bangalore.');return}
+if(payment==='cod'&&!selectedMapLocation){alert('Please select your exact delivery location on Google Maps before placing a COD order.');return}
+const orderId='VB-'+Date.now().toString().slice(-8);
+const lines=c.map(i=>i.name+' | Qty: '+i.qty+' | MRP: '+money(i.price)+' | Amount: '+money(i.price*i.qty)).join('\n');
+const locationBlock=selectedMapLocation
+?'\n\nSelected Delivery Location:\n'+selectedMapLocation.address+'\nLatitude: '+selectedMapLocation.lat.toFixed(6)+'\nLongitude: '+selectedMapLocation.lng.toFixed(6)+'\nGoogle Maps: https://www.google.com/maps?q='+selectedMapLocation.lat.toFixed(6)+','+selectedMapLocation.lng.toFixed(6)
+:'';
+const body='New VeBlyss Global COD Order\n\nOrder ID: '+orderId+'\n\nCustomer: '+fd.get('name')+'\nMobile: '+fd.get('mobile')+'\nEmail: '+fd.get('email')+'\nAddress: '+fd.get('address')+'\nArea: '+fd.get('area')+'\nCity: '+fd.get('city')+'\nPincode: '+fd.get('pincode')+locationBlock+'\n\nProducts:\n'+lines+'\n\nTotal MRP: '+money(total)+' (incl. GST)\nPayment: '+payment.toUpperCase()+'\n\nPlease confirm availability and dispatch.';
+if(payment==='upi'){alert('UPI/Razorpay is prepared for integration but is not activated yet. Your order has not been charged.');return}
+const mailto='mailto:girish@veblyssglobal.com?subject='+encodeURIComponent('VeBlyss COD Order '+orderId)+'&body='+encodeURIComponent(body);
+VeBlyssCart.save([]);
+VeBlyssCart.updateBadges();
+window.location.href=mailto;
+setTimeout(()=>{alert('Your COD order details are ready to email. The cart has been cleared. Please press Send in your email app to complete the notification.');},700);
+});
 let deliveryMap=null,deliveryMarker=null,deliveryGeocoder=null,selectedMapLocation=null,autocompleteSessionToken=null,autocompleteLib=null;
 function setSelectedLocation(latLng,address){
   selectedMapLocation={lat:latLng.lat(),lng:latLng.lng(),address:address||('Lat '+latLng.lat().toFixed(6)+', Lng '+latLng.lng().toFixed(6))};
